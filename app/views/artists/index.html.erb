@@ -1,0 +1,7 @@
+<h3>Artist's Dashboard</h3>
+<ul>
+  <% @artists.each do |artist| %>
+    <li>Artist Has <%= pluralize(artist.song_count, 'song') %> <li>
+    <li> <%= link_to artist.name, artist_path(artist) %> </li>
+  <% end %>
+</ul>
